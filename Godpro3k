@@ -152,8 +152,8 @@ task.spawn(function()
         if Driveworld["autocomplete"] then
             if isvehicle() then
                 for _,v in next, workspace.Races:GetChildren() do
-                    if (v:FindFirstChild("Checkpoints") and v:FindFirstChild("Checkpoints"):GetChildren()[1]:FindFirstChild("Forcefield")) then
-                        local total_checkpoints = #v.Checkpoints:GetChildren()
+                    if (v:FindFirstChild("Checkpoints") and v:FindFirstChild("Checkpoints"):GetDescendants()[1]:FindFirstChild("Forcefield")) then
+                        local total_checkpoints = #v.Checkpoints:GetDescendants()
                         for i = 1, total_checkpoints do
                             if v.Checkpoints[i]:FindFirstChild("Forcefield") and Driveworld["autocomplete"] then
                                 Laps = Race.Laps.Label
