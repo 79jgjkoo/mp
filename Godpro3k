@@ -151,7 +151,7 @@ task.spawn(function()
     while task.wait() do
         if Driveworld["autocomplete"] then
             if isvehicle() then
-                for _,v in next, workspace.Races:GetChildren() do
+                for _,v in next, workspace.Races.AroundTheWorld:GetChildren() do
                     if (v:FindFirstChild("Checkpoints") and v:FindFirstChild("Checkpoints"):GetDescendants()[1]:FindFirstChild("Forcefield")) then
                         local total_checkpoints = #v.Checkpoints:GetDescendants()
                         for i = 1, total_checkpoints do
